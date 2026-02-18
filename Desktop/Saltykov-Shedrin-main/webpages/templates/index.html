@@ -1,0 +1,119 @@
+{% load static %}
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>РОУНБ - к юбилею Салтыкова-Щедрина</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <div class="navbar bg-body-tertiary"> <!-- Исправлено: было nav, стало div -->
+          <div class="container">
+            <a class="navbar-brand" href="#">
+              <img src="{% static 'images/logo.png' %}" alt="РОУНБ" width="30" height="24">
+            </a>
+          </div>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключатель навигации">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="">Главная</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'biography' %}">Биография</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Служба</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Общественная деятельность</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Источники
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Список литературы</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">О библиотеке</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
+            <button class="btn btn-outline-success" type="submit">Поиск</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ОСНОВНОЙ КОНТЕНТ С ФОТОГРАФИЕЙ -->
+    <main class="container my-5">
+      <!-- Заголовок страницы -->
+      <div class="row mb-4">
+        <div class="col-12 text-center">
+          <h1 class="display-4">К 200-летию М.Е. Салтыкова-Щедрина</h1>
+          <p class="lead">1826 - 2026</p>
+        </div>
+      </div>
+
+      <!-- Блок с фото и информацией -->
+      <div class="row">
+        <!-- Колонка с фото -->
+        <div class="col-md-4 mb-4">
+          <div class="card shadow">
+            <img src="{% static 'images/saltykov-shchedrin.jpg' %}" 
+                 class="card-img-top img-fluid" 
+                 alt="Портрет М.Е. Салтыкова-Щедрина"
+                 onerror="this.onerror=null; this.src='https://via.placeholder.com/400x500?text=Салтыков-Щедрин'">
+            <div class="card-body">
+              <p class="card-text text-muted text-center">Михаил Евграфович Салтыков-Щедрин</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Колонка с текстом -->
+        <div class="col-md-8">
+          <div class="card shadow">
+            <div class="card-body">
+              <h2 class="card-title h4">О писателе</h2>
+              <p class="card-text">
+                <strong>Михаил Евграфович Салтыков-Щедрин</strong> (псевдоним <strong>Н. Щедрин</strong>) — 
+                русский писатель, журналист, редактор журнала «Отечественные записки», 
+                Рязанский и Тверской вице-губернатор.
+              </p>
+              <p class="card-text">
+                Родился 27 января 1826 года в селе Спас-Угол Тверской губернии. 
+                Его творчество сочетает в себе публицистичность и художественное 
+                мастерство, сатиру и глубокий психологизм.
+              </p>
+              <h3 class="h5 mt-4">Известные произведения:</h3>
+              <ul>
+                <li>«Господа Головлёвы»</li>
+                <li>«История одного города»</li>
+                <li>«Сказки»</li>
+                <li>«Пошехонская старина»</li>
+              </ul>
+              <a href="{% url 'biography' %}" class="btn btn-outline-success btn-lg" role="button">Перейти к изучению биографии</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Футер (подвал) -->
+    <footer class="bg-light py-4 mt-5">
+      <div class="container text-center">
+        <p class="mb-0">РОУНБ им. Горького © 2026 | К юбилею М.Е. Салтыкова-Щедрина</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
+</html>
