@@ -1,0 +1,17 @@
+body { font-family: 'Georgia', serif; }
+.container { max-width: 1200px; }
+
+/* Стили для страниц, которые их подключают */
+.bio-styles p { 
+    color: black; 
+    padding: 20px; 
+    margin: 25px 0; 
+    line-height: 1.8; 
+    background: #f8f9fa; 
+    border-left: 4px solid #007bff; 
+}
+
+.work-styles h2 { 
+    color: grey; 
+    border-bottom: 3px solid #dc3545; 
+}

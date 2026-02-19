@@ -19,9 +19,12 @@ from django.urls import path
 from webpages import views
 
 urlpatterns = [
+    path('', views.index),
     path('admin/', admin.site.urls),
+    path('biography/', views.biography, name='biography'),
     path('mainpage/', views.mainpage, name='mainpage'),
     path('communitywork/', views.communitywork, name='communitywork'),
     path('employment/', views.employment, name='employment'),
     path('materials/', views.materials, name='materials'),
+    path('base/', views.base, name='base')
     ]
