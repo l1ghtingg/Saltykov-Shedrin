@@ -17,7 +17,7 @@
       <div class="container-fluid">
         <div class="navbar bg-body-tertiary">
           <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="{% url 'mainpage' %}">
               <img src="{% static 'images/logo.png' %}" alt="РОУНБ" width="30" height="24">
             </a>
           </div>
@@ -34,17 +34,17 @@
               <a class="nav-link" href="{% url 'biography' %}">Биография</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Служба</a>
+              <a class="nav-link" href="{% url 'employment' %}">Служба</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Общественная деятельность</a>
+              <a class="nav-link" href="{% url 'communitywork' %}">Общественная деятельность</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Источники
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Список литературы</a></li>
+                <li><a class="dropdown-item" href="{% url 'materials' %}">Список литературы</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="#">О библиотеке</a></li>
               </ul>
@@ -72,6 +72,6 @@
         <p class="mb-0">РОУНБ им. Горького © 2026 | К юбилею М.Е. Салтыкова-Щедрина</p>
       </div>
     </footer>
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
