@@ -26,5 +26,7 @@ urlpatterns = [
     path('communitywork/', views.communitywork, name='communitywork'),
     path('employment/', views.employment, name='employment'),
     path('materials/', views.materials, name='materials'),
-    path('base/', views.base, name='base')
+    path('base/', views.base, name='base'),
+    path('meeting/', views.meeting, name='meeting'),
+    path('housepage/', views.housepage, name='housepage'),
     ]

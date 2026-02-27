@@ -15,3 +15,7 @@ def materials(request):
     return render(request, 'materials.html')
 def base(request):
     return render(request, 'base.html')
+def housepage(request):
+    return render(request, 'housepage.html')
+def meeting(request):
+    return render(request, 'meeting.html')

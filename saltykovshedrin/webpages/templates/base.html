@@ -30,24 +30,25 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="{% url 'mainpage' %}">Главная</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'biography' %}">Биография</a>
-            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Биография
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{% url 'housepage' %}">Дом Щедрина</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="{% url 'meeting' %}">Знакомство с Хвощинской</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="{% url 'biography' %}">Краткая биография</a></li>
+              </ul>
             <li class="nav-item">
               <a class="nav-link" href="{% url 'employment' %}">Служба</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{% url 'communitywork' %}">Общественная деятельность</a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Источники
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="{% url 'materials' %}">Список литературы</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">О библиотеке</a></li>
-              </ul>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'materials' %}">Материалы</a>
             </li>
           </ul>
           <form class="d-flex" role="search">
