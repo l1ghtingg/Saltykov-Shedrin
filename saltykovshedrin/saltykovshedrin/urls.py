@@ -29,4 +29,5 @@ urlpatterns = [
     path('base/', views.base, name='base'),
     path('meeting/', views.meeting, name='meeting'),
     path('housepage/', views.housepage, name='housepage'),
+    path('tr_department/', views.tr_department, name='tr_department'),
     ]

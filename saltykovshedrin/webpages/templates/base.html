@@ -41,9 +41,16 @@
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="{% url 'biography' %}">Краткая биография</a></li>
               </ul>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'employment' %}">Служба</a>
-            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Служба
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{% url 'employment' %}">Рязанская губерния накануне приезда Щедрина</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="{% url 'tr_department' %}">Служба в Рязанской казенной палате </a></li>
+                <li><hr class="dropdown-divider"></li>
+              </ul>
             <li class="nav-item">
               <a class="nav-link" href="{% url 'communitywork' %}">Общественная деятельность</a>
             </li>

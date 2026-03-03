@@ -19,3 +19,5 @@ def housepage(request):
     return render(request, 'housepage.html')
 def meeting(request):
     return render(request, 'meeting.html')
+def tr_department(request):
+    return render(request, 'tr_department.html')
