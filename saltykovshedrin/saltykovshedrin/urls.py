@@ -30,4 +30,6 @@ urlpatterns = [
     path('meeting/', views.meeting, name='meeting'),
     path('housepage/', views.housepage, name='housepage'),
     path('tr_department/', views.tr_department, name='tr_department'),
+    path('hludovskoe/', views.hludovskoe, name='hludovskoe'),
+    path('kislinskaya/', views.kislinskaya, name='kislinskaya')
     ]

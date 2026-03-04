@@ -21,3 +21,7 @@ def meeting(request):
     return render(request, 'meeting.html')
 def tr_department(request):
     return render(request, 'tr_department.html')
+def hludovskoe(request):
+    return render(request, 'hludovskoe.html')
+def kislinskaya(request):
+    return render(request, 'kislinskaya.html')
